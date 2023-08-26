@@ -1,0 +1,5 @@
+For secure API there are multiple ways.
+
+1. If there is login feature then by using username and password we can generate JWT token and we will pass token in header during API call and validate token at node js API endpoint.
+
+2. If there is not login feature then we can generate token and save in database. In every API call we will get token from database and pass in header then we will validate token at node js API endpoint. For security purpose we can change token in every 30 minutes via CRON and but during Token change any API call can be inprogress so we will maintain last 2 token in database so current API call will not impact.

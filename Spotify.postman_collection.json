@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "71ed7488-086d-4629-95ec-850b555dbc26",
+		"name": "Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "737427"
+	},
+	"item": [
+		{
+			"name": "InsertData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isrc\":\"INS181303032\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8887/insertData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8887",
+					"path": [
+						"insertData"
+					]
+				},
+				"description": "spotify"
+			},
+			"response": []
+		},
+		{
+			"name": "getDataByArtist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artist\":\"ankit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8887/getDataByArtist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8887",
+					"path": [
+						"getDataByArtist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDataByISRC",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isrc\":\"INS181803008\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8887/getDataByISRC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8887",
+					"path": [
+						"getDataByISRC"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

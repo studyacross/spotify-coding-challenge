@@ -1,0 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Aug 25, 2023 at 05:02 AM
+-- Server version: 5.7.25
+-- PHP Version: 7.3.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `spotify`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Tracks`
+--
+
+CREATE TABLE `Tracks` (
+  `id` int(11) NOT NULL,
+  `isrc` varchar(100) NOT NULL,
+  `album_name` mediumtext NOT NULL,
+  `artist_name` mediumtext NOT NULL,
+  `album_images` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Tracks`
+--
+
+INSERT INTO `Tracks` (`id`, `isrc`, `album_name`, `artist_name`, `album_images`) VALUES
+(9, 'INS182301655', 'Mohabbat', 'Amaal Mallik', 'https://i.scdn.co/image/ab67616d0000b2731e94dada106ba25257232876'),
+(14, 'INS181801563', 'Dilbar (From \"Satyameva Jayate\")', 'Neha Kakkar,Dhvani Bhanushali,Ikka,Tanishk Bagchi', 'https://i.scdn.co/image/ab67616d0000b273021413d7c67b1dc8f6609ed5'),
+(15, 'INS181303032', 'Aashiqui 2', 'Ankit Tiwari', 'https://i.scdn.co/image/ab67616d0000b273348468c203278d510f0cbc5a'),
+(16, 'INS181803008', '52 Non Stop Dilbar Dilbar Remix', 'Arya Acharya,Aastha Gill,Amaal Mallik,Ankit Tiwari,Arijit Singh,Badshah,Darshan Raval,Dev Negi,Dhvani Bhanushali,Divya Kumar,Guru Randhawa,Ikka,Jassie Gill,Jubin Nautiyal,Mika Singh,Neha Kakkar,Shreya Ghoshal,Sonu Nigam,Tulsi Kumar,Yo Yo Honey Singh,Aman Hayer,Amit Trivedi,Anand Raj Anand,Anu Malik,Arko,Goldboy,Gourov-Roshin,Haji Springer,Himesh Reshammiya,Millind Gaba,Mithoon,Music Mg,Panjabi MC,Preet Hundal,Rajat Nagpal,Rochak Kohli,Sachin-Jigar,Sanjay Leela Bhansali,Sukh-E Muzical Doctorz,Tanishk Bagchi,Vee,Zack Knight', 'https://i.scdn.co/image/ab67616d0000b273a48f9e27526ed4f7b8dbe5f9'),
+(17, 'INY091700035', 'Tiger Zinda Hai', 'Vishal-Shekhar,Atif Aslam,Irshad Kamil', 'https://i.scdn.co/image/ab67616d0000b273576521b1bf3ec2fd7fdfcbd5'),
+(18, 'INS182201785', 'Naa Peru Seesa (From \"Ramarao On Duty\")', 'Shreya Ghoshal,Sam C.S.', 'https://i.scdn.co/image/ab67616d0000b27315fbdf59d29ecf9ab7fc69b2');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `Tracks`
+--
+ALTER TABLE `Tracks`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `Tracks`
+--
+ALTER TABLE `Tracks`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
