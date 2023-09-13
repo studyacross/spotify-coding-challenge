@@ -2,12 +2,12 @@
  * the Spotify Accounts.
  */
 require('dotenv').config();
-var express = require('express'); // Express web server framework
-var bodyParser = require('body-parser')
-var request = require('request'); // "Request" library
-var cors = require('cors');
-var querystring = require('querystring');
-var cookieParser = require('cookie-parser');
+const express = require('express'); // Express web server framework
+const bodyParser = require('body-parser')
+const request = require('request'); // "Request" library
+const cors = require('cors');
+const querystring = require('querystring');
+const cookieParser = require('cookie-parser');
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
   host: process.env.DB_HOST,
@@ -15,8 +15,8 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, pr
   port: process.env.DB_PORT
 });
 
-var client_id = process.env.CLIENT_ID; // Your client id
-var client_secret = process.env.CLIENT_SECRET; // Your secret
+const client_id = process.env.CLIENT_ID; // Your client id
+const client_secret = process.env.CLIENT_SECRET; // Your secret
 const Op = Sequelize.Op;
 
 try {
@@ -38,7 +38,7 @@ const Track = sequelize.define(
   timestamps: false
 });
 
-var app = express();
+const app = express();
 
 app.use(express.static(__dirname + '/public'))
   .use(cors())
