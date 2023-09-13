@@ -5,9 +5,6 @@ require('dotenv').config();
 const express = require('express'); // Express web server framework
 const bodyParser = require('body-parser')
 const request = require('request'); // "Request" library
-const cors = require('cors');
-const querystring = require('querystring');
-const cookieParser = require('cookie-parser');
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
   host: process.env.DB_HOST,
@@ -39,10 +36,6 @@ const Track = sequelize.define(
 });
 
 const app = express();
-
-app.use(express.static(__dirname + '/public'))
-  .use(cors())
-  .use(cookieParser());
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
